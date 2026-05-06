@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <main class="app">
+    <header>
+      <p class="badge">Task 02 </p>
+      <h1>Neon Tic-Tac-Toe</h1>
+      <p class="subtitle">Player vs Player or challenge the AI bot 🤖</p>
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <div class="select-group">
+          <label for="gameMode">Game Mode</label>
+          <select id="gameMode">
+            <option value="pvp">Player vs Player</option>
+            <option value="ai">Player vs AI</option>
+          </select>
+        </div>
+
+        <div class="select-group">
+          <label for="difficulty">AI Level</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <button id="themeBtn" class="small-btn">🌗 Theme</button>
+      </div>
+
+      <div class="players">
+        <span>🟢 Mustafa connected</span>
+        <span id="botStatus">🤖 AI Bot standby</span>
+      </div>
+
+      <div class="scoreboard">
+        <div><strong id="xScore">0</strong><span>X Wins</span></div>
+        <div><strong id="oScore">0</strong><span>O / AI Wins</span></div>
+        <div><strong id="drawScore">0</strong><span>Draws</span></div>
+      </div>
+
+      <div id="status" class="status">Player X's Turn</div>
+      <div id="aiMessage" class="ai-message">Choose your mode and start playing.</div>
+
+      <div class="board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+
+      <div class="actions">
+        <button id="restartBtn">Restart Round</button>
+        <button id="resetScoreBtn" class="outline">Reset Score</button>
+      </div>
+    </section>
+    <footer class="footer">
+  <p>
+    Developed by
+    <a href="https://www.linkedin.com/in/mustafaabdelwahed" target="_blank" rel="noopener noreferrer">
+      Mustafa Abdelwahed
+    </a>
+  </p>
+
+  <div class="footer-links">
+    <a href="https://github.com/mustafaabdelwahed85-hub" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <span>•</span>
+    <a href="https://www.linkedin.com/in/mustafaabdelwahed" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <h2 id="modalTitle">Game Over</h2>
+      <p id="modalText">Result message</p>
+      <button id="playAgainBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
